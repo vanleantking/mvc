@@ -14,9 +14,10 @@ if (count($url) > 0) {
 		$calledController = new $controller;
 
 		if (method_exists($calledController, $uriAction)) {
+
 			return $calledController->$uriAction();
 		} else {
-			echo "buzzzzz";
+			throw new Exception("Have no action: $uriAction", 1);			
 		}
 
 	} catch(Exception $e) {

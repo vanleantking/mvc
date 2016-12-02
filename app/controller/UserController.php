@@ -4,7 +4,7 @@ class UserController
 	
 	public function index($page)
 	{
-		echo $v;
+		echo $page;
 	}
 }
 ?>
