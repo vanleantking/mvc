@@ -1,6 +1,7 @@
 <?php
 include 'app/core/autoload.php';
 
+// Get URL request
 $url = explode('/', trim($_SERVER['REQUEST_URI']));
 if (count($url) > 0) {
 	$uriController = $url['1'];
@@ -17,7 +18,7 @@ if (count($url) > 0) {
 		} else {
 			echo "buzzzzz";
 		}
-		
+
 	} catch(Exception $e) {
 		echo $e->getMessage();
 	}
