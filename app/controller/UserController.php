@@ -1,8 +1,7 @@
 <?php
 class UserController
-{
-	
-	public function index($page)
+{	
+	public function user($page)
 	{
 		echo $page;
 	}

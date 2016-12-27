@@ -1,6 +1,10 @@
 <?php
 include 'app/core/autoload.php';
+include 'app/core/DB.php';
+include 'config.php';
 
+$db = new DB();
+$db->connect();
 // Get URL request
 $url = explode('/', trim($_SERVER['REQUEST_URI']));
 if (count($url) > 0) {
